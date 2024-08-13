@@ -30,8 +30,11 @@ class TimeEntryController extends Controller
             'date' => 'required|date',
             'description' => 'nullable|string',
         ]);
+        $project_id = Task::where('id',$request->task_id)->pluck('project_id')->first();
+        $new_array = array('project_id'=>$project_id);
+        $findal_data = array_merge($validated, $new_array);
 
-        TimeEntry::create($validated);
+        TimeEntry::create($findal_data);
         return redirect('/time-entries');
     }
 }
