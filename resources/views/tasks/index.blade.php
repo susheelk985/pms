@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container mt-5">
-        <h2>Manage Tasks</h2>
+        <h2 align="center">Manage Tasks</h2>
         <table class="table table-bordered">
             <thead>
                 <tr>

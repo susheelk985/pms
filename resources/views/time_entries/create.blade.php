@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mt-5">
-    <h2>Time Entry</h2>
+    <h2 align="center">Time Entry</h2>
     <form action="/time-entries" method="POST">
         @csrf
         <div class="form-group">
